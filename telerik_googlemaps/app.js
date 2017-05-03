@@ -21,7 +21,7 @@
     var bootstrap = function() {
         $(function() {
             app.mobileApp = new kendo.mobile.Application(document.body, {
-                transition: 'slide',
+                transition: 'fade',
                 skin: 'nova',
                 initial: 'components/home/view.html'
             });
@@ -36,11 +36,11 @@
             allItems = $('#navigation-container-more').find('a'),
             navigationShowMoreContent = '';
 
-            allItems.each(function(index) {
-                navigationShowMoreContent += '<li>' + allItems[index].outerHTML + '</li>';
-            });
+        allItems.each(function(index) {
+            navigationShowMoreContent += '<li>' + allItems[index].outerHTML + '</li>';
+        });
 
-             navigationShowMoreView.html(navigationShowMoreContent);
+        navigationShowMoreView.html(navigationShowMoreContent);
         kendo.bind($('#navigation-show-more-view'), app.showMore.viewModel);
 
         app.notification = $("#notify");

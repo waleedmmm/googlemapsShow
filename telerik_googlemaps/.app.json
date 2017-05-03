@@ -8,13 +8,29 @@
       "title": "Home View",
       "addToNavigation": true,
       "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "map",
+      "components": [],
+      "title": "تجربة الخرائط",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "map2",
+      "components": [],
+      "title": "تجربة الخرائط 2",
+      "addToNavigation": true,
+      "icon": "action"
     }
   ],
   "dataProviders": [],
   "name": "kendoUiMobileApp",
   "navigation": "tabstrip",
   "view": "home",
-  "transition": "slide",
+  "transition": "fade",
   "showMoreTab": true,
   "skin": "nova",
   "skinMainColor": "#32364c",

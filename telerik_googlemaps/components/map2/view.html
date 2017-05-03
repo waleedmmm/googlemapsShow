@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+         <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.rtl.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2017.1.118/styles/kendo.mobile.all.min.css"/>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+</head>
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+            * element that contains the map. */
+            #map
+            {
+                height: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+            html, body
+            {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script>
+          
+      new kendo.mobile.Application(document.body, {layout: "default"});
+
+      //initialize the google map
+      function buildMap(e) {
+        var myOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var mapElement = $("#map_canvas");
+        var container = e.view.content;
+
+        var map = new google.maps.Map(mapElement[0], myOptions);
+      }
+
+    </script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCah9zUU3KYvK-giXHIsEulttx3FP9cBUY&sensor=true"
+                async defer></script>
+    </body>
+</html>
